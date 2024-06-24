@@ -76,11 +76,11 @@ namespaces:
         app.kubernetes.io/created-by: eks-workshop
       limits:
         - default: # this section defines default limits
-            cpu: 500m
+            cpu: 800m
           defaultRequest: # this section defines default requests
-            cpu: 500m
+            cpu: 800m
           max: # max and min define the limit range
-            cpu: "2"
+            cpu: "4"
           min:
             cpu: 100m
           type: Container
@@ -108,11 +108,11 @@ namespaces:
         app.kubernetes.io/created-by: eks-workshop
       limits:
         - default: # this section defines default limits
-            cpu: 500m
+            cpu: 800m
           defaultRequest: # this section defines default requests
-            cpu: 500m
+            cpu: 800m
           max: # max and min define the limit range
-            cpu: "2"
+            cpu: "4"
           min:
             cpu: 100m
           type: Container
@@ -140,11 +140,11 @@ namespaces:
         app.kubernetes.io/created-by: eks-workshop
       limits:
         - default: # this section defines default limits
-            cpu: 500m
+            cpu: 800m
           defaultRequest: # this section defines default requests
-            cpu: 500m
+            cpu: 800m
           max: # max and min define the limit range
-            cpu: "2"
+            cpu: "4"
           min:
             cpu: 100m
           type: Container
@@ -172,11 +172,11 @@ namespaces:
         app.kubernetes.io/created-by: eks-workshop
       limits:
         - default: # this section defines default limits
-            cpu: 500m
+            cpu: 800m
           defaultRequest: # this section defines default requests
-            cpu: 500m
+            cpu: 800m
           max: # max and min define the limit range
-            cpu: "2"
+            cpu: "4"
           min:
             cpu: 100m
           type: Container
@@ -204,11 +204,11 @@ namespaces:
         app.kubernetes.io/created-by: eks-workshop
       limits:
         - default: # this section defines default limits
-            cpu: 500m
+            cpu: 800m
           defaultRequest: # this section defines default requests
-            cpu: 500m
+            cpu: 800m
           max: # max and min define the limit range
-            cpu: "2"
+            cpu: "4"
           min:
             cpu: 100m
           type: Container
