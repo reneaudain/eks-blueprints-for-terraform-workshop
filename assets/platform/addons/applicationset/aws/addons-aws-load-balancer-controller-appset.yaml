@@ -20,10 +20,12 @@ spec:
                 matchExpressions:
                   - key: akuity.io/argo-cd-cluster-name
                     operator: NotIn
-                    values: [in-cluster]
+                    values: 
+                      - in-cluster
                   - key: enable_aws_load_balancer_controller
                     operator: In
-                    values: ['true']
+                    values: 
+                      - 'true'
           - clusters:
               selector:
                 matchLabels:
