@@ -28,12 +28,14 @@ spec:
               selector:
                 matchLabels:
                   environment: staging
+                  app: staging
               values:
                 addonChartVersion: 1.7.1
           - clusters:
               selector:
                 matchLabels:
                   environment: prod
+                  app: staging
               values:
                 addonChartVersion: 1.7.1
   template:
