@@ -10,6 +10,7 @@ spec:
   - clusters:
       selector:
         matchLabels:
+          app: webstore
           workload_webstore: 'true'   
       values:
         workload: webstore
@@ -20,6 +21,7 @@ spec:
         environment: '{{metadata.labels.environment}}'
         tenant: 'webstore'
         workloads: 'true'
+        app: webstore
     spec:
       project: default
       source:

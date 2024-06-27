@@ -3,18 +3,21 @@ kind: Deployment
 metadata:
   name: orders-mysql
   labels:
+    app: orders
     app.kubernetes.io/created-by: eks-workshop
     app.kubernetes.io/team: database
 spec:
   replicas: 1
   selector:
     matchLabels:
+      app: orders
       app.kubernetes.io/name: orders
       app.kubernetes.io/instance: orders
       app.kubernetes.io/component: mysql
   template:
     metadata:
       labels:
+        app: orders
         app.kubernetes.io/name: orders
         app.kubernetes.io/instance: orders
         app.kubernetes.io/component: mysql

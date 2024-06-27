@@ -12,6 +12,7 @@ spec:
           - clusters:
               selector:
                 matchLabels:
+                  app: webstore
                   workload_webstore: 'true'  
               values:
                 workload: webstore
@@ -30,6 +31,7 @@ spec:
         tenant: 'webstore'
         component: '{{path.basename}}'
         workloads: 'true'
+        app: webstore
     spec:
       project: default
       source:

@@ -3,22 +3,26 @@ kind: Deployment
 metadata:
   name: catalog
   labels:
+    app: catalog
     app.kubernetes.io/created-by: eks-workshop
     app.kubernetes.io/type: app
 spec:
   replicas: 1
   selector:
     matchLabels:
+      app: catalog
       app.kubernetes.io/name: catalog
       app.kubernetes.io/instance: catalog
       app.kubernetes.io/component: service
   template:
     metadata:
       annotations:
+        app: catalog
         prometheus.io/path: /metrics
         prometheus.io/port: "8080"
         prometheus.io/scrape: "true"
       labels:
+        app: catalog
         app.kubernetes.io/name: catalog
         app.kubernetes.io/instance: catalog
         app.kubernetes.io/component: service

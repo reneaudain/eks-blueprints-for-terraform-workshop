@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: catalog-mysql
   labels:
+    app: catalog
     app.kubernetes.io/created-by: eks-workshop
 spec:
   type: ClusterIP
@@ -12,6 +13,7 @@ spec:
       protocol: TCP
       name: mysql
   selector:
+    app: catalog
     app.kubernetes.io/name: catalog
     app.kubernetes.io/instance: catalog
     app.kubernetes.io/component: mysql

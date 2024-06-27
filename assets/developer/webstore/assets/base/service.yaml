@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: assets
   labels:
+    app: assets
     app.kubernetes.io/created-by: eks-workshop
 spec:
   type: ClusterIP

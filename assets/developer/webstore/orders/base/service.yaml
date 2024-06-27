@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: orders
   labels:
+    app: orders
     app.kubernetes.io/created-by: eks-workshop
 spec:
   type: ClusterIP
@@ -12,6 +13,7 @@ spec:
       protocol: TCP
       name: http
   selector:
+    app: orders
     app.kubernetes.io/name: orders
     app.kubernetes.io/instance: orders
     app.kubernetes.io/component: service

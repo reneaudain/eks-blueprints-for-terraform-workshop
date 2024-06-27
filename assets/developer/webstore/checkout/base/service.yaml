@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: checkout
   labels:
+    app: checkout
     app.kubernetes.io/created-by: eks-workshop
 spec:
   type: ClusterIP
@@ -12,6 +13,7 @@ spec:
       protocol: TCP
       name: http
   selector:
+    app: checkout
     app.kubernetes.io/name: checkout
     app.kubernetes.io/instance: checkout
     app.kubernetes.io/component: service

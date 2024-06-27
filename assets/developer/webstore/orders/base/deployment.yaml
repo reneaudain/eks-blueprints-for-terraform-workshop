@@ -3,22 +3,26 @@ kind: Deployment
 metadata:
   name: orders
   labels:
+    app: orders
     app.kubernetes.io/created-by: eks-workshop
     app.kubernetes.io/type: app
 spec:
   replicas: 1
   selector:
     matchLabels:
+      app: orders
       app.kubernetes.io/name: orders
       app.kubernetes.io/instance: orders
       app.kubernetes.io/component: service
   template:
     metadata:
       annotations:
+        app: orders
         prometheus.io/path: /actuator/prometheus
         prometheus.io/port: "8080"
         prometheus.io/scrape: "true"
       labels:
+        app: orders
         app.kubernetes.io/name: orders
         app.kubernetes.io/instance: orders
         app.kubernetes.io/component: service

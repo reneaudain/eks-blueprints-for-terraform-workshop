@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: checkout-redis
   labels:
+    app: database
     app.kubernetes.io/created-by: eks-workshop
 spec:
   type: ClusterIP
@@ -12,6 +13,7 @@ spec:
       protocol: TCP
       name: redis
   selector:
+    app: database
     app.kubernetes.io/name: checkout
     app.kubernetes.io/instance: checkout
     app.kubernetes.io/component: redis

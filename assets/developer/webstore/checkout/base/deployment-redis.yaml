@@ -3,18 +3,21 @@ kind: Deployment
 metadata:
   name: checkout-redis
   labels:
+    app: database
     app.kubernetes.io/created-by: eks-workshop
     app.kubernetes.io/team: database
 spec:
   replicas: 1
   selector:
     matchLabels:
+      app: database
       app.kubernetes.io/name: checkout
       app.kubernetes.io/instance: checkout
       app.kubernetes.io/component: redis
   template:
     metadata:
       labels:
+        app: database
         app.kubernetes.io/name: checkout
         app.kubernetes.io/instance: checkout
         app.kubernetes.io/component: redis

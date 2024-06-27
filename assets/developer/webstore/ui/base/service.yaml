@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: ui
   labels:
+    app: ui
     helm.sh/chart: ui-0.0.1
     app.kubernetes.io/name: ui
     app.kubernetes.io/instance: ui
@@ -17,6 +18,7 @@ spec:
       protocol: TCP
       name: http
   selector:
+    app: ui
     app.kubernetes.io/name: ui
     app.kubernetes.io/instance: ui
     app.kubernetes.io/component: service

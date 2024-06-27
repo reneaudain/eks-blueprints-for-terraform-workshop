@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: carts
   labels:
+    app: carts
     app.kubernetes.io/created-by: eks-workshop
 spec:
   type: ClusterIP
@@ -12,6 +13,7 @@ spec:
       protocol: TCP
       name: http
   selector:
+    app: carts
     app.kubernetes.io/name: carts
     app.kubernetes.io/instance: carts
     app.kubernetes.io/component: service
