@@ -10,7 +10,6 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: database
       app.kubernetes.io/name: checkout
       app.kubernetes.io/instance: checkout
       app.kubernetes.io/component: redis
