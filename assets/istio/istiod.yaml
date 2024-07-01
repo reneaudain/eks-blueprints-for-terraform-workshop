@@ -20,12 +20,12 @@ spec:
         global:
           meshID: mesh1
           multiCluster:
-            clusterName: ${CLUSTER_NAME}
+            clusterName: hub-cluster
           network: network1
-          hub: ${REPO}
-          tag: ${ISTIO_IMAGE}
+          hub: istio
+          tag: 1.22.2
         meshConfig:
-          trustDomain: ${CLUSTER_NAME}
+          trustDomain: hub-cluster
           accessLogFile: /dev/stdout
           accessLogEncoding: JSON
           enableAutoMtls: true
