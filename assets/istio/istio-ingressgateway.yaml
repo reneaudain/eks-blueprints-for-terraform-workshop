@@ -19,7 +19,7 @@ spec:
     helm:
       values: |
         # Name allows overriding the release name. Generally this should not be set
-        name: "istio-ingressgateway-${REVISION}"
+        name: "istio-ingressgateway-1.22.2"
         # revision declares which revision this gateway is a part of
         revision: 1.22.2
         replicaCount: 1
@@ -47,7 +47,7 @@ spec:
           proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
         # Labels to apply to all resources
         labels:
-          istio.io/rev: ${REVISION}
+          istio.io/rev: 1.22.2
           istio: ingressgateway
   syncPolicy:
     automated:
