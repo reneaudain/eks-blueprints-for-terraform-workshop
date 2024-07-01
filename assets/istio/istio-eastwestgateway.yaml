@@ -15,13 +15,13 @@ spec:
   source:
     chart: gateway
     repoURL: https://istio-release.storage.googleapis.com/charts
-    targetRevision: ${ISTIO_VERSION}
+    targetRevision: 1.22.1
     helm:
       values: |
         # Name allows overriding the release name. Generally this should not be set
         name: "istio-eastwestgateway-${REVISION}"
         # revision declares which revision this gateway is a part of
-        revision: "${REVISION}"
+        revision: "1.22.1"
         replicaCount: 1
         service:
           # Type of service. Set to "None" to disable the service entirely
@@ -58,9 +58,9 @@ spec:
           # can select this workload.
           app: istio-eastwestgateway-${REVISION}
           istio: eastwestgateway
-          revision: ${REVISION}
+          revision: 1.22.1
           # Matches spec.values.global.network in the istiod deployment
-          topology.istio.io/network: ${CLUSTER_NAME}
+          topology.istio.io/network: hub-cluster
   syncPolicy:
     automated:
       prune: true
