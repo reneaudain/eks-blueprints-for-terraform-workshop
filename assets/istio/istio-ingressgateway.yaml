@@ -15,14 +15,14 @@ spec:
   source:
     chart: gateway
     repoURL: https://istio-release.storage.googleapis.com/charts
-    targetRevision: 1.8.2
+    targetRevision: "1.22.2"
     helm:
       values: |
         # Name allows overriding the release name. Generally this should not be set
         name: "istio-ingressgateway-${REVISION}"
         # revision declares which revision this gateway is a part of
-        revision: 1.8.2
-        replicaCount: 1
+        revision: latest
+        replicaCount: 1.22.2
         service:
           # Type of service. Set to "None" to disable the service entirely
           type: LoadBalancer
