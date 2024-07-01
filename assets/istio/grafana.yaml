@@ -1104,6 +1104,5 @@ data:
     Workload Dashboard\",\"version\":1,\"weekStart\":\"\"}\n"
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
   name: istio-services-grafana-dashboards
   namespace: istio-system
