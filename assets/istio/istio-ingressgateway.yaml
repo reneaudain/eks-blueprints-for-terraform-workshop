@@ -21,7 +21,7 @@ spec:
         # Name allows overriding the release name. Generally this should not be set
         name: "istio-ingressgateway-${REVISION}"
         # revision declares which revision this gateway is a part of
-        revision: "${REVISION}"
+        revision: 1.8.2
         replicaCount: 1
         service:
           # Type of service. Set to "None" to disable the service entirely
