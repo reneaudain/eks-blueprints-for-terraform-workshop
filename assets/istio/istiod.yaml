@@ -13,7 +13,7 @@ spec:
   source:
     chart: istiod
     repoURL: https://istio-release.storage.googleapis.com/charts
-    targetRevision: 1.22.2
+    targetRevision: 1.22.1
     helm:
       values: |
         revision: ${REVISION}
@@ -23,7 +23,7 @@ spec:
             clusterName: hub-cluster
           network: network1
           hub: istio
-          tag: 1.22.2
+          tag: 1.22.1
         meshConfig:
           trustDomain: hub-cluster
           accessLogFile: /dev/stdout
